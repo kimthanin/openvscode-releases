@@ -10,7 +10,7 @@ RUN apt update && apt install -y git wget sudo curl && rm -rf /var/lib/apt/lists
 
 RUN sudo apt update | sudo apt upgrade -y
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - | sudo npm i -g localtunnel
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 RUN sudo apt install python3-pip
 
