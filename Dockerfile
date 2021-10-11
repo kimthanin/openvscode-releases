@@ -7,7 +7,7 @@ ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
 RUN apt update && \
-    apt install -y git wget sudo && \
+    apt install -y git wget sudo python3 npm && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/
