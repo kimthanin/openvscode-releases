@@ -6,9 +6,13 @@ ARG USERNAME=openvscode-server
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-RUN apt update && \
-    apt install -y git wget sudo python3 npm && \
-    rm -rf /var/lib/apt/lists/*
+RUN sudo apt update | sudo apt upgrade -y
+
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - | sudo npm i -g localtunnel
+
+RUN sudo apt install python3-pip
+
+RUN apt install -y git wget sudo && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/
 
