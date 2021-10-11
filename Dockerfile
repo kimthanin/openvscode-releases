@@ -12,7 +12,7 @@ RUN sudo apt update | sudo apt upgrade -y
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
-RUN sudo apt install python3-pip
+RUN sudo apt install python3-pip -y
 
 WORKDIR /home/
 
