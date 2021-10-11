@@ -6,7 +6,7 @@ ARG USERNAME=openvscode-server
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-RUN apt update && apt install -y git wget sudo && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y git wget sudo curl && rm -rf /var/lib/apt/lists/*
 
 RUN sudo apt update | sudo apt upgrade -y
 
